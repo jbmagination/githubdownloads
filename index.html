@@ -61,17 +61,20 @@
       }
       
       function doTheThing(array) {
+        document.getElementById('downloads').innerHTML = '';
         var tbody = document.createElement('tbody');
         JSON.parse(array).forEach((download) => {
           alert(JSON.stringify(download))
           var row = document.createElement('tr');
           var name = document.createTextNode(download.name);
           var desc = document.createTextNode(download.description);
-          var url = document.createTextNode("<a href=\""+download.url+"\">Download</a>")
+          var url = document.createElement('a')
+          url.href = download.url
+          url.textContent = 'Download'
           row.appendChild(document.createElement('td').appendChild(name));
           row.appendChild(document.createElement('td').appendChild(desc));
           row.appendChild(document.createElement('td').appendChild(url));
-          tbody.appendChild(row)
+          tbody.appendChild(row);
         })
         document.getElementById('downloads').appendChild(document.createElement('table').appendChild(tbody));
       }
