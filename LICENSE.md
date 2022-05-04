@@ -24,4 +24,4 @@ The dataset's JSON files are provided by GitHub directly via the API, and are ar
 
 Released files that are archived and put into the dataset are licensed under the same license as the repository itself at the time of said file being published. 
 
-The archived JSON files are provided under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. You can find it at `licenses/LICENSE_CC0.txt`.
+The archived JSON files are provided under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. You can find it under `licenses/LICENSE_CC0.txt`.
