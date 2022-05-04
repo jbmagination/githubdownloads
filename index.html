@@ -4,11 +4,15 @@
     <script>window.onerror = (message, url, lineNumber, colNumber) => {alert(message+'\n\n'+lineNumber+':'+colNumber)}</script>
     <title>GitHub Downloads</title>
     <style>
+    :root {
+      supported-color-schemes: light dark;
+    }
     body {
       right: 50%;
       bottom: 50%;
       transform: translate(50%,50%);
       position: absolute;
+      text-align: center;
     }
     * {
       font-family: Helvetica;
@@ -61,10 +65,12 @@
         JSON.parse(array).forEach((download) => {
           alert(JSON.stringify(download))
           var row = document.createElement('tr');
-          var dlText = document.createTextNode("<a href=\""+download.url+"\">Download</a>")
-          row.appendChild(document.createElement('td').appendChild(download.name));
-          row.appendChild(document.createElement('td').appendChild(download.description));
-          row.appendChild(document.createElement('td').appendChild(dlText));
+          var name = document.createTextNode(download.name);
+          var desc = document.createTextNode(download.description);
+          var url = document.createTextNode("<a href=\""+download.url+"\">Download</a>")
+          row.appendChild(document.createElement('td').appendChild(name));
+          row.appendChild(document.createElement('td').appendChild(desc));
+          row.appendChild(document.createElement('td').appendChild(url));
         })
         table.appendChild(document.createElement('tbody').appendChild(row));
         document.getElementById('downloads').appendChild(table);
@@ -83,5 +89,7 @@
       <input type="submit" value="Submit">
     </form>
     <div id="downloads"></div>
+    <br>
+    <p><a href="https://github.com/jbmagination/githubdownloads" font-size="75%">Source code, dataset, licenses, and takedowns</a></p>
   </body>
 </html>
