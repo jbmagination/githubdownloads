@@ -15,14 +15,44 @@
     </style>
     <script>
       function doTheThing() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            alert(JSON.parse(this.responseText).id);
+        var xhttp1 = new XMLHttpRequest();
+        var xhttp2 = new XMLHttpRequest();
+        var xhttp3 = new XMLHttpRequest();
+        
+        xhttp1.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              xhttp2.open('./downloads/'+JSON.parse(this.responseText).id+'.json');
+              xhttp2.send();
+            } else {
+              alert("Couldn't get that repository.");
+            }
           }
-        };
-        xhttp.open("GET", 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value, true);
-        xhttp.send();
+        }
+        
+        xhttp2.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              alert('dataset json');
+            } else {
+              xhttp3.open('https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value+'/downloads', true);
+              xhttp3.send();
+            }
+          }
+        }
+        
+        xhttp3.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              alert(JSON.parse(this.responseText));
+            } else {
+              alert("Couldn't get any downloads");
+            }
+          }
+        }
+        
+        xhttp1.open("GET", 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value, true);
+        xhttp1.send();
       }
     </script>
   </head>
