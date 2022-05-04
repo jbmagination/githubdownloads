@@ -13,8 +13,22 @@
       font-family: Helvetica;
     }
     </style>
+    <script>
+      function doTheThing() {
+        alert('https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value);
+      }
+    </script>
   </head>
   <body>
-    <p>Hello</p>
+    <p><b font-size="150%">GitHub Downloads Checker</b></p>
+    <form action="javascript:doTheThing()">
+      https://github.com/
+      <input type="text" id="username" name="username">
+      /
+      <input type="text" id="repository" name="repository">
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+    </form> 
   </body>
 </html>
