@@ -35,7 +35,8 @@
             if (this.status == 200) {
               doTheThing(this.responseText);
             } else {
-              alert("Couldn't get any downloads");
+              xhttp3.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value+'/downloads', true);
+              xhttp3.send();
             }
           }
         }
@@ -45,8 +46,7 @@
             if (this.status == 200) {
               doTheThing(this.responseText);
             } else {
-              xhttp3.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value+'/downloads', true);
-              xhttp3.send();
+              alert("Couldn't get any downloads");
             }
           }
         }
