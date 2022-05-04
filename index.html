@@ -14,7 +14,7 @@
     }
     </style>
     <script>
-      function doTheThing() {
+      function startTheThing() {
         var xhttp1 = new XMLHttpRequest();
         var xhttp2 = new XMLHttpRequest();
         var xhttp3 = new XMLHttpRequest();
@@ -33,10 +33,9 @@
         xhttp2.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              alert('dataset json');
+              doTheThing(this.responseText);
             } else {
-              xhttp3.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value+'/downloads', true);
-              xhttp3.send();
+              alert("Couldn't get any downloads");
             }
           }
         }
@@ -44,9 +43,10 @@
         xhttp3.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              alert(JSON.parse(this.responseText));
+              doTheThing(this.responseText);
             } else {
-              alert("Couldn't get any downloads");
+              xhttp3.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value+'/downloads', true);
+              xhttp3.send();
             }
           }
         }
@@ -54,11 +54,19 @@
         xhttp1.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value, true);
         xhttp1.send();
       }
+      
+      function doTheThing(array) {
+        //var table = document.createElement('table');
+        //var tableBody = document.createElement('tbody');
+        array.forEach((download) => {
+        alert(download)
+        })
+      }
     </script>
   </head>
   <body>
     <p><b font-size="150%">GitHub Downloads Checker</b></p>
-    <form action="javascript:doTheThing()">
+    <form action="javascript:startTheThing()">
       https://github.com/
       <input type="text" id="username" name="username">
       /
@@ -66,6 +74,8 @@
       <br>
       <br>
       <input type="submit" value="Submit">
-    </form> 
+    </form>
+    <div id="downloads">
+    </div>
   </body>
 </html>
