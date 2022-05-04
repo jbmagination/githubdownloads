@@ -1,7 +1,7 @@
 The website, *excluding datasets*, is licensed under GNU Affero General Public License:
 
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+    A tool to access and help archive GitHub downloads
+    Copyright (C) 2022  JBMagination
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
