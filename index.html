@@ -61,9 +61,10 @@
         JSON.parse(array).forEach((download) => {
           alert(JSON.stringify(download))
           var row = document.createElement('tr');
+          var dlText = document.createTextNode("<a href=\""+download.url+"\">Download</a>")
           row.appendChild(document.createElement('td').appendChild(download.name));
           row.appendChild(document.createElement('td').appendChild(download.description));
-          row.appendChild(document.createElement('td').appendChild(document.createTextNode("<a href=\""download.url"\">Download</a>"))));
+          row.appendChild(document.createElement('td').appendChild(dlText));
         })
         table.appendChild(document.createElement('tbody').appendChild(row));
         document.getElementById('downloads').appendChild(table);
