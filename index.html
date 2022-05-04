@@ -15,7 +15,14 @@
     </style>
     <script>
       function doTheThing() {
-        alert('https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            alert(JSON.parse(this.responseText).id);
+          }
+        };
+        xhttp.open("GET", 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value, true);
+        xhttp.send();
       }
     </script>
   </head>
