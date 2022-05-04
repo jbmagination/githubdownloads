@@ -57,7 +57,6 @@
       
       function doTheThing(array) {
         var table = document.createElement('table');
-        var tbody = document.createElement('tbody');
         JSON.parse(array).forEach((download) => {
           alert(JSON.stringify(download))
           var row = document.createElement('tr');
@@ -65,7 +64,8 @@
           row.appendChild(document.createElement('td').appendChild(download.description));
           row.appendChild(document.createElement('td').appendChild(document.createTextNode("<a href=\""download.url"\">Download</a>")));
         })
-        document.getElementById('downloads').appendChild('row');
+        table.appendChild(document.createElement('tbody').appendChild(row));
+        document.getElementById('downloads').appendChild(table);
       }
     </script>
   </head>
