@@ -1,4 +1,4 @@
-If you are part of a repository, can certify your relations, and would like to have your repository removed from the dataset, please make an issue.
+If you are with/for a repository, can prove your relations, and would like to have your repository removed from the dataset, please make an issue.
 
 If you are from GitHub, and would like this repository removed, **please also make an issue and let me know!** I really do appreciate this place and don't want to get on your bad side. 
 
