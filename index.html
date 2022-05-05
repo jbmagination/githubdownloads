@@ -11,13 +11,13 @@
       color-scheme: light dark;
     }
     
-    /* body {
+    body {
       right: 50%;
       bottom: 50%;
       transform: translate(50%,50%);
       position: absolute;
       text-align: center;
-    } */
+    }
     
     td, th {
       padding: 3px;
@@ -76,7 +76,6 @@
         var table = document.createElement('table');
         var tbody = document.createElement('tbody');
         JSON.parse(array).forEach((download) => {
-          alert(JSON.stringify(download))
           var row = document.createElement('tr');
           var namefield = document.createElement('td');
           var descfield = document.createElement('td');
@@ -108,9 +107,9 @@
       /
       <input type="text" id="repository" name="repository">
       <br>
-      <br>
       <input type="submit" value="Submit">
     </form>
+    <br>
     <div id="downloads"></div>
     <br>
     <p><a href="https://github.com/jbmagination/githubdownloads" font-size="75%">Source code, dataset, licenses, and takedowns</a></p>
