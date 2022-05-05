@@ -78,15 +78,21 @@
         JSON.parse(array).forEach((download) => {
           alert(JSON.stringify(download))
           var row = document.createElement('tr');
+          var namefield = document.createElement('td');
+          var descfield = document.createElement('td');
+          var urlfield = document.createElement('td');
           var name = document.createTextNode(download.name);
           var desc = document.createTextNode(download.description);
-          var url = document.createElement('a')
-          url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + download.id)
-          url.download = download.name
-          url.textContent = 'Download'
-          row.appendChild(document.createElement('td').appendChild(name));
-          row.appendChild(document.createElement('td').appendChild(desc));
-          row.appendChild(document.createElement('td').appendChild(url));
+          var url = document.createElement('a');
+          url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + download.id);
+          url.download = download.name;
+          url.textContent = 'Download';
+          namefield.appendChild(name);
+          descfield.appendChild(desc);
+          urlfield.appendChild(url);
+          row.appendChild(namefield);
+          row.appendChild(descfield);
+          row.appendChild(urlfield);
           tbody.appendChild(row);
         })
         table.appendChild(tbody);
