@@ -73,7 +73,15 @@
       }
       
       function doTheThing(array, repoId) {
+        // so many of these would be EXCELLENT as not variables but JAVASCRIPT IS A HOE
+        // sorry for the inconsistent names lol
         document.getElementById('downloads').innerHTML = '';
+        
+        if (array.length < 1) {
+          alert('This repository has no downloads');
+          return;
+        }
+        
         var table = document.createElement('table');
         var tbody = document.createElement('tbody');
         var row = document.createElement('tr');
@@ -95,8 +103,6 @@
         urlheader.appendChild(urlheadertext);
         tbody.appendChild(row);
         JSON.parse(array).forEach((download) => {
-          // so many of these would be EXCELLENT as not variables but JAVASCRIPT IS A HOE
-          // sorry for the inconsistent names lol
           var row = document.createElement('tr');
           var namefield = document.createElement('td');
           var descfield = document.createElement('td');
