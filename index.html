@@ -80,7 +80,7 @@
           var name = document.createTextNode(download.name);
           var desc = document.createTextNode(download.description);
           var url = document.createElement('a')
-          url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + document.id.toString())
+          url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + download.id)
           url.download = download.name
           url.textContent = 'Download'
           row.appendChild(document.createElement('td').appendChild(name));
