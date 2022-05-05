@@ -10,6 +10,7 @@
     :root {
       color-scheme: light dark;
     }
+    
     body {
       right: 50%;
       bottom: 50%;
@@ -17,9 +18,11 @@
       position: absolute;
       text-align: center;
     }
+    
     td, th {
       padding: 3px;
     }
+    
     * {
       font-family: Helvetica;
     }
@@ -77,7 +80,7 @@
           var name = document.createTextNode(download.name);
           var desc = document.createTextNode(download.description);
           var url = document.createElement('a')
-          url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + document.id)
+          url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + document.id.toString())
           url.download = download.name
           url.textContent = 'Download'
           row.appendChild(document.createElement('td').appendChild(name));
