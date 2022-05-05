@@ -30,10 +30,10 @@
         xhttp1.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              xhttp2.open('GET', './downloads/'+JSON.parse(this.responseText).id+'.json');
+              xhttp2.open('GET', './downloads/' + JSON.parse(this.responseText).id + '.json');
               xhttp2.send();
             } else {
-              alert("Couldn't get that repository.");
+              alert("Couldn't get a repository");
             }
           }
         }
@@ -41,9 +41,10 @@
         xhttp2.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
+              alert('Dataset');
               doTheThing(this.responseText);
             } else {
-              xhttp3.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value+'/downloads', true);
+              xhttp3.open('GET', 'https://api.github.com/repos/' + document.getElementById("username").value + '/' + document.getElementById("repository").value + '/downloads', true);
               xhttp3.send();
             }
           }
@@ -52,9 +53,10 @@
         xhttp3.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
+              alert('GitHub API');
               doTheThing(this.responseText);
             } else {
-              alert("Couldn't get any downloads");
+              alert("Couldn't get a download array");
             }
           }
         }
