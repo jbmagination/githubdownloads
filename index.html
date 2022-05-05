@@ -111,8 +111,13 @@
           datefield.appendChild(date);
           descfield.appendChild(desc);
           urlfield.appendChild(url);
+          row.appendChild(nameheader);
+          row.appendChild(descheader);
+          row.appendChild(dateheader);
+          row.appendChild(urlheader);
           row.appendChild(namefield);
           row.appendChild(descfield);
+          row.appendChild(datefield);
           row.appendChild(urlfield);
           tbody.appendChild(row);
         })
@@ -129,11 +134,12 @@
       /
       <input type="text" id="repository" name="repository">
       <br>
+      <br>
       <input type="submit" value="Submit">
     </form>
     <br>
     <div id="downloads"></div>
     <br>
-    <p><a href="https://github.com/jbmagination/githubdownloads" style="font-size:75%">Source code, dataset, licenses, and takedowns</a></p>
+    <p><a href="https://github.com/jbmagination/githubdownloads" style="font-size:75%">Source code, licenses, and takedowns</a></p>
   </body>
 </html>
