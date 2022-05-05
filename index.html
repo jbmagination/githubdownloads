@@ -31,6 +31,7 @@
       font-family: Helvetica;
     }
     </style>
+    <script type="text/javascript" src="./day.js"></script>
     <script>
       function startTheThing() {
         var xhttp1 = new XMLHttpRequest();
@@ -80,17 +81,34 @@
         var table = document.createElement('table');
         var tbody = document.createElement('tbody');
         JSON.parse(array).forEach((download) => {
+          // so many of these would be EXCELLENT as not variables but JAVASCRIPT IS A HOE
+          // sorry for the inconsistent names lol
           var row = document.createElement('tr');
+          var nameheader = document.createElement('th');
+          var descheader = document.createElement('th');
+          var dateheader = document.createElement('th');
+          var urlheader = document.createElement('th');
           var namefield = document.createElement('td');
           var descfield = document.createElement('td');
+          var datefield = document.createElement('td');
           var urlfield = document.createElement('td');
+          var nameheadertext = document.createTextNode('Name');
+          var descheadertext = document.createTextNode('Description');
+          var dateheadertext = document.createTextNode('Date');
+          var urlheadertext = document.createTextNode('Download');
           var name = document.createTextNode(download.name);
           var desc = document.createTextNode(download.description);
+          var date = document.createTextNode(dayjs(download.created_at));
           var url = document.createElement('a');
           url.href = download.html_url ? download.html_url : ('./downloads/' + repoId + '/' + download.id);
           url.download = download.name;
           url.textContent = 'Download';
+          nameheader.appendChild(nameheadertext);
+          descheader.appendChild(descheadertext);
+          dateheader.appendChild(dateheadertext);
+          urlheader.appendChild(urlheadertext);
           namefield.appendChild(name);
+          datefield.appendChild(date);
           descfield.appendChild(desc);
           urlfield.appendChild(url);
           row.appendChild(namefield);
