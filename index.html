@@ -34,7 +34,7 @@
           if (this.readyState == 4) {
             if (this.status == 200) {
               var repoId = JSON.parse(this.responseText).id;
-              xhttp2.open('GET', './downloads/' + repoId + '.json');
+              xhttp2.open('GET', './downloads/' + repoId + '/files.json');
               xhttp2.send();
             } else {
               alert("Couldn't get a repository");
