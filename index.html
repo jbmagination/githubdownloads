@@ -34,7 +34,7 @@
         xhttp1.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              var repoId = JSON.parse(this.responseText).id;
+              repoId = JSON.parse(this.responseText).id;
               xhttp2.open('GET', './downloads/' + repoId + '/files.json');
               xhttp2.send();
             } else {
@@ -46,7 +46,6 @@
         xhttp2.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              alert('Dataset');
               doTheThing(this.responseText, repoId);
             } else {
               xhttp3.open('GET', 'https://api.github.com/repos/' + document.getElementById("username").value + '/' + document.getElementById("repository").value + '/downloads', true);
@@ -58,7 +57,6 @@
         xhttp3.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              alert('GitHub API');
               doTheThing(this.responseText, repoId);
             } else {
               alert("Couldn't get a download array");
