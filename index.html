@@ -73,6 +73,7 @@
       
       function doTheThing(array, repoId) {
         document.getElementById('downloads').innerHTML = '';
+        var table = document.createElement('table');
         var tbody = document.createElement('tbody');
         JSON.parse(array).forEach((download) => {
           alert(JSON.stringify(download))
@@ -88,7 +89,8 @@
           row.appendChild(document.createElement('td').appendChild(url));
           tbody.appendChild(row);
         })
-        document.getElementById('downloads').appendChild(document.createElement('table').appendChild(tbody));
+        table.appendChild(tbody);
+        document.getElementById('downloads').appendChild(table);
       }
     </script>
   </head>
