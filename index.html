@@ -83,7 +83,7 @@
         // sorry for the inconsistent names lol
         document.getElementById('downloads').innerHTML = '';
         
-        if (array === undefined || array.length == 0) {
+        if (JSON.parse(array) === undefined || JSON.parse(array).length == 0) {
           document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t find any downloads for repository</i></p>';
           return;
         }
