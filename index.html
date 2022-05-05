@@ -11,13 +11,13 @@
       color-scheme: light dark;
     }
     
-    body {
+    /* body {
       right: 50%;
       bottom: 50%;
       transform: translate(50%,50%);
       position: absolute;
       text-align: center;
-    }
+    } */
     
     td, th {
       padding: 3px;
@@ -67,7 +67,7 @@
           }
         }
         
-        xhttp1.open('GET', 'https://api.github.com/repos/'+document.getElementById("username").value+'/'+document.getElementById("repository").value, true);
+        xhttp1.open('GET', 'https://api.github.com/repos/' + document.getElementById("username").value + '/' + document.getElementById("repository").value, true);
         xhttp1.send();
       }
       
