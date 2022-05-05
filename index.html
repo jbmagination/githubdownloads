@@ -30,7 +30,7 @@
     <script type="text/javascript" src="./day.js"></script>
     <script>
       function startTheThing() {
-        document.getElementById('downloads').innerHTML = '<p><i>Working on it... (probably)</i></p>';
+        document.getElementById('downloads').innerHTML = '<p><i>Starting...</i></p>';
         
         var xhttp1 = new XMLHttpRequest();
         var xhttp2 = new XMLHttpRequest();
@@ -40,11 +40,12 @@
         xhttp1.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
+              document.getElementById('downloads').innerHTML = '<p><i>Attempting to get array from the archive...</i></p>';
               repoId = JSON.parse(this.responseText).id;
               xhttp2.open('GET', './downloads/' + repoId + '/files.json');
               xhttp2.send();
             } else {
-              alert("Couldn't get a repository");
+              document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t get repository</i></p>';
             }
           }
         }
@@ -54,6 +55,7 @@
             if (this.status == 200) {
               doTheThing(this.responseText, repoId);
             } else {
+              document.getElementById('downloads').innerHTML = '<p><i>Attempting to get array from the GitHub API...</i></p>';
               xhttp3.open('GET', 'https://api.github.com/repos/' + document.getElementById("username").value + '/' + document.getElementById("repository").value + '/downloads', true);
               xhttp3.send();
             }
@@ -65,11 +67,12 @@
             if (this.status == 200) {
               doTheThing(this.responseText, repoId);
             } else {
-              alert("Couldn't get a download array");
+              document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t get array</i></p>';
             }
           }
         }
         
+        document.getElementById('downloads').innerHTML = '<p><i>Attempting to get repository...</i></p>';
         xhttp1.open('GET', 'https://api.github.com/repos/' + document.getElementById("username").value + '/' + document.getElementById("repository").value, true);
         xhttp1.send();
       }
@@ -79,8 +82,8 @@
         // sorry for the inconsistent names lol
         document.getElementById('downloads').innerHTML = '';
         
-        if (array.length < 1) {
-          alert('This repository has no downloads');
+        if (array === undefined || array.length == 0) {
+          document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t find any downloads for repository</i></p>';
           return;
         }
         
@@ -134,6 +137,7 @@
   </head>
   <body>
     <p><b style="font-size:150%">GitHub Downloads</b></p>
+    <noscript>Unfortunately, you need JavaScript for this. Sorry!</noscript>
     <form action="javascript:startTheThing()">
       https://github.com/
       <input type="text" id="username" name="username">
