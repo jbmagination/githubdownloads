@@ -1,276 +1,209 @@
 [
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/174898",
     "id": 174898,
-    "html_url": "./downloads/944926/174898.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-5.1.zip",
     "name": "worldedit-5.1.zip",
     "description": "",
     "created_at": "2012-01-17T04:14:44Z",
     "size": 733184
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/160455",
     "id": 160455,
-    "html_url": "./downloads/944926/160455.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-5.0.zip",
     "name": "worldedit-5.0.zip",
     "description": "",
     "created_at": "2011-12-13T05:18:51Z",
     "size": 584704
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/134226",
     "id": 134226,
-    "html_url": "./downloads/944926/134226.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.7.zip",
     "name": "worldedit-4.7.zip",
     "description": "",
     "created_at": "2011-10-02T03:38:40Z",
     "size": 498688
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/103088",
     "id": 103088,
-    "html_url": "./downloads/944926/103088.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.6.zip",
     "name": "worldedit-4.6.zip",
     "description": "",
     "created_at": "2011-06-05T05:44:53Z",
     "size": 446464
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/95535",
     "id": 95535,
-    "html_url": "./downloads/944926/95535.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.5.zip",
     "name": "worldedit-4.5.zip",
     "description": "",
     "created_at": "2011-05-02T01:28:01Z",
     "size": 434176
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/93927",
     "id": 93927,
-    "html_url": "./downloads/944926/93927.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.4-src.zip",
     "name": "worldedit-4.4-src.zip",
     "description": "",
     "created_at": "2011-04-24T21:04:28Z",
     "size": 737280
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/93926",
     "id": 93926,
-    "html_url": "./downloads/93926.zip",
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.4.zip",
     "name": "worldedit-4.4.zip",
     "description": "",
     "created_at": "2011-04-24T21:04:05Z",
     "size": 441344
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/89087",
     "id": 89087,
-    "gh_html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.3-src.zip",
     "name": "worldedit-4.3-src.zip",
     "description": "",
     "created_at": "2011-04-03T18:15:41Z",
     "size": 735232
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/89086",
     "id": 89086,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.3.zip",
     "name": "worldedit-4.3.zip",
     "description": "",
     "created_at": "2011-04-03T18:15:25Z",
     "size": 440320
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/84390",
     "id": 84390,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.2-src.zip",
     "name": "worldedit-4.2-src.zip",
     "description": "",
     "created_at": "2011-03-14T04:02:48Z",
     "size": 731136
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/84388",
     "id": 84388,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.2.zip",
     "name": "worldedit-4.2.zip",
     "description": "",
     "created_at": "2011-03-14T04:02:25Z",
     "size": 436224
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/83465",
     "id": 83465,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.1-src.zip",
     "name": "worldedit-4.1-src.zip",
     "description": "",
     "created_at": "2011-03-10T09:18:34Z",
     "size": 617472
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/83464",
     "id": 83464,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.1.zip",
     "name": "worldedit-4.1.zip",
     "description": "",
     "created_at": "2011-03-10T09:18:21Z",
     "size": 334848
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/81078",
     "id": 81078,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta8-src.zip",
     "name": "worldedit-4.0-beta8-src.zip",
     "description": "",
     "created_at": "2011-02-27T07:46:34Z",
     "size": 594944
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/81077",
     "id": 81077,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta8.zip",
     "name": "worldedit-4.0-beta8.zip",
     "description": "",
     "created_at": "2011-02-27T07:46:15Z",
     "size": 324608
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80934",
     "id": 80934,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta7-src.zip",
     "name": "worldedit-4.0-beta7-src.zip",
     "description": "",
     "created_at": "2011-02-26T10:58:28Z",
     "size": 593920
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80933",
     "id": 80933,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta7.zip",
     "name": "worldedit-4.0-beta7.zip",
     "description": "",
     "created_at": "2011-02-26T10:58:15Z",
     "size": 323584
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80677",
     "id": 80677,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta6-src.zip",
     "name": "worldedit-4.0-beta6-src.zip",
     "description": "",
     "created_at": "2011-02-25T01:24:52Z",
     "size": 592896
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80676",
     "id": 80676,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta6.zip",
     "name": "worldedit-4.0-beta6.zip",
     "description": "",
     "created_at": "2011-02-25T01:24:30Z",
     "size": 322560
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80599",
     "id": 80599,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta5_.zip",
     "name": "worldedit-4.0-beta5_.zip",
     "description": "",
     "created_at": "2011-02-24T17:38:12Z",
     "size": 318464
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80598",
     "id": 80598,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta5-src.zip",
     "name": "worldedit-4.0-beta5-src.zip",
     "description": "",
     "created_at": "2011-02-24T17:37:43Z",
     "size": 582656
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80597",
     "id": 80597,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta5.zip",
     "name": "worldedit-4.0-beta5.zip",
     "description": "",
     "created_at": "2011-02-24T17:37:32Z",
     "size": 318464
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80383",
     "id": 80383,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta4-src.zip",
     "name": "worldedit-4.0-beta4-src.zip",
     "description": "",
     "created_at": "2011-02-23T17:54:07Z",
     "size": 582656
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80382",
     "id": 80382,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta4.zip",
     "name": "worldedit-4.0-beta4.zip",
     "description": "",
     "created_at": "2011-02-23T17:53:55Z",
     "size": 318464
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80273",
     "id": 80273,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta3.zip",
     "name": "worldedit-4.0-beta3.zip",
     "description": "",
     "created_at": "2011-02-23T08:38:15Z",
     "size": 318464
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80047",
     "id": 80047,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit_ref_rev6.pdf",
     "name": "worldedit_ref_rev6.pdf",
     "description": "Printable reference ",
     "created_at": "2011-02-22T09:41:31Z",
     "size": 373760
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80046",
     "id": 80046,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta2-src.zip",
     "name": "worldedit-4.0-beta2-src.zip",
     "description": "",
     "created_at": "2011-02-22T09:41:12Z",
     "size": 582656
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/80044",
     "id": 80044,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta2.zip",
     "name": "worldedit-4.0-beta2.zip",
     "description": "",
     "created_at": "2011-02-22T09:15:33Z",
     "size": 318464
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/79636",
     "id": 79636,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta1-src.zip",
     "name": "worldedit-4.0-beta1-src.zip",
     "description": "For Bukkit Bamboo builds 359+ / Jenkins builds 49+ and Single Player Commands ",
     "created_at": "2011-02-20T02:14:59Z",
     "size": 582656
   },
   {
-    "url": "https://api.github.com/repos/EngineHub/WorldEdit/downloads/79635",
     "id": 79635,
-    "html_url": "https://github.com/downloads/EngineHub/WorldEdit/worldedit-4.0-beta1.zip",
     "name": "worldedit-4.0-beta1.zip",
     "description": "For Bukkit Bamboo builds 359+ / Jenkins builds 49+ and Single Player Commands ",
     "created_at": "2011-02-20T02:14:53Z",
