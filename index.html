@@ -40,6 +40,7 @@
         var xhttp1 = new XMLHttpRequest();
         var xhttp2 = new XMLHttpRequest();
         var xhttp3 = new XMLHttpRequest();
+        var xhttp4 = new XMLHttpRequest();
         var repoId = 0;
         
         xhttp1.onreadystatechange = function() {
@@ -47,15 +48,32 @@
             if (this.status == 200) {
               document.getElementById('downloads').innerHTML = '<p><i>Attempting to get array from the archive...</i></p>';
               repoId = JSON.parse(this.responseText).id;
-              xhttp2.open('GET', './downloads/' + repoId + '/files.json');
-              xhttp2.send();
+              xhttp3.open('GET', './downloads/' + repoId + '/files.json');
+              xhttp3.send();
             } else {
-              document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t get repository</i></p>';
+              xhttp2.open('GET', './downloads/repositories.json');
+              xhttp3.send();
             }
           }
         }
         
         xhttp2.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+             document.getElementById('downloads').innerHTML = '<p><i>Attempting to get repository from the archive...</i></p>';
+              var repositoryIndex = JSON.parse(this.responseText)[document.getElementById("username").value.trim() + '/' + document.getElementById("repository").value.trim()];
+              if ((!(repositoryIndex == undefined)) || repositoryIndex) {
+                document.getElementById('downloads').innerHTML = '<p><i>Attempting to get array from the archive...</i></p>';
+                repoId = repositoryIndex;
+                xhttp3.open('GET', './downloads/' + repoId + '/files.json');
+                xhttp3.send();
+              }
+            } else {
+              document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t get repository</i></p>';
+            }
+          }
+        }
+        xhttp3.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
               doTheThing(this.responseText, repoId);
@@ -67,7 +85,7 @@
           }
         }
         
-        xhttp3.onreadystatechange = function() {
+        xhttp4.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
               doTheThing(this.responseText, repoId);
@@ -77,7 +95,7 @@
           }
         }
         
-        document.getElementById('downloads').innerHTML = '<p><i>Attempting to get repository...</i></p>';
+        document.getElementById('downloads').innerHTML = '<p><i>Attempting to get repository from the GitHub API...</i></p>';
         xhttp1.open('GET', 'https://api.github.com/repos/' + document.getElementById("username").value.trim() + '/' + document.getElementById("repository").value.trim(), true);
         xhttp1.send();
       }
