@@ -67,6 +67,8 @@
                 repoId = repositoryIndex;
                 xhttp3.open('GET', './downloads/' + repoId + '/files.json');
                 xhttp3.send();
+              } else {
+                document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t get repository</i></p>';
               }
             } else {
               document.getElementById('downloads').innerHTML = '<p><i>Couldn\'t get repository</i></p>';
