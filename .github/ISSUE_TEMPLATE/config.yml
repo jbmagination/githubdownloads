@@ -1,0 +1,4 @@
+contact_links:
+  - name: Having a problem with something you downloaded?
+    url: https://github.com/search
+    about: Please consider checking the repository *instead*. We do not provide tech support for the projects in this archive.
